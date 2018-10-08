@@ -1,9 +1,9 @@
-FROM ubuntu:18.04
+FROM debian:jessie-20180831
 
 MAINTAINER Yaroslav Admin "yaroslav.admin@softwerk.se"
 
 # Install helper packages
-RUN apt-get update && apt-get install -y curl gnupg
+RUN apt-get update && apt-get install -y curl apt-transport-https
 
 # Add Yarn repo
 RUN curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
