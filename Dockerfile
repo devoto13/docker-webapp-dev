@@ -1,4 +1,4 @@
-FROM debian:buster-20190506
+FROM debian:buster-20190708
 
 MAINTAINER Yaroslav Admin "yaroslav.admin@softwerk.se"
 
@@ -17,7 +17,7 @@ RUN echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/so
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 
 # Install dependencies
-RUN apt-get install -y git nodejs=12.2.0-1nodesource1 yarn=1.16.0-1 google-chrome-stable=74.0.3729.157-1
+RUN apt-get install -y git nodejs=12.7.0-1nodesource1 yarn=1.17.3-1 google-chrome-stable=76.0.3809.87-1
 
 # Create volume for Yarn cache
 VOLUME /usr/local/share/.cache/yarn/v4
