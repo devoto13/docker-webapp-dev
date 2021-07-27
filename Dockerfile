@@ -10,9 +10,6 @@ RUN echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/so
 # Install dependencies
 RUN apt-get update && apt-get install -y git google-chrome-stable=92.0.4515.107-1
 
-# Create volume for Yarn cache
-VOLUME /usr/local/share/.cache/yarn/v6
-
 # Configure working directory
 WORKDIR /usr/src/app
 
